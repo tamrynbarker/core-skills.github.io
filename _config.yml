@@ -55,5 +55,5 @@ github_url: https://github.com/core-skills
 google_analytics:
 
 # The following settings are NECESSARY for the Prologue theme to run:
-theme: jekyll-theme-prologue
+remote_theme: core-skills/jekyll-theme-prologue
 collections: [sections]
