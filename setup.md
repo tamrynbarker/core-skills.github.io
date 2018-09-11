@@ -1,21 +1,15 @@
 ---
-title: Get started
-permalink: /setup
 layout: page
-order: 2
-icon: fa-cloud-download
-icon-style: solid
+title: Getting set up
 ---
 
-## Getting set up for the course
-
-### Github
+## Github
 
 All course content is delivered using GitHub. If you don't already have a GitHub account you will also need to sign up for one [here](https://github.com/join).
 
 Please let [Jess](mailto:jesse.robertson@csiro.au) or [Sophie](mailto:sophie@corehub.com.au) know what your GitHub username is so that we can add you to the [core-skills GitHub organization](https://github.com/orgs/core-skills). Then you should have read access to all the repositories for each week.
 
-### Local software
+## Local software
 
 There are two software prerequisites you should try to get installed on your machine - you will need both Git (a software collaboration/versioning tool) and a Python installation. There will be a prerequisite two-day course (run by the Curtin Uni Data Carpentry team) to introduce you to these tools and get you up and running, but if you're keen to get started we recommend:
 
@@ -37,15 +31,35 @@ All you should need to do is open the relevant repository in GitKraken, hit 'pul
 
 Then you need to do two things to get set up: (a) build the conda environment and (b) run the notebook server to run the examples. This will be covered in detail in the pre-requisite days and will hopefully become second nature to you over the course of the course. However if you have any issues please contact one of the facilitators.
 
-#### Building the conda environment:
+### Building the conda environment:
 
-This makes sure that you have all the Python libraries available on your machine that are required for the week's code examples. 
+This makes sure that you have all the Python libraries available on your machine that are required for the week's code examples.
 
-#### Run the Jupyter notebook server
+**If you're using the command line**, you should be able to head to the folder containing your code:
 
-Now you can 
+```bash
+$ cd path/to/my/cloned/repo  
+```
 
+and then run the `conda env` command:
 
+```bash
+$ conda env create --file environment.yml
+```
+
+This should build the environment for you and download any required software libraries (you'll need an internet connection while you do this).
+
+**If you're using Anaconda Navigator** you can _import_ the environment directly.
+
+**add pictures for this here**
+
+### Run the Jupyter notebook server
+
+Now you can run the notebook server. 
+
+**If you're using the command line** you should be able to do the following
+
+If you're using Anaconda Navigator, you can
 
 ### How to find your way around in the repos
 

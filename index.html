@@ -1,0 +1,50 @@
+---
+layout: default
+title: Home
+---
+
+<div class="posts">
+  <h1 class="post-title">
+    Core skills program info page
+  </h1> <br>
+  <p>
+    The inaugural flagship program “Geoscientist to Data Scientist” is being launched in 2018. This CORE Skills Program for Leaders is a sold-out 12 week, one day per week professional education program for technical resource professionals, facilitated by specialists and academic educators. <br><br>
+
+Step back from your day-to-day responsibilities for one day a week to learn from experts how to bring new tools and types of analysis back to your day job and team, maintaining that connection directly to your role.
+  </p>
+  
+</div>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ site.baseurl }}/{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+
